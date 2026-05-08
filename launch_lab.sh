@@ -1,4 +1,3 @@
-cat << 'EOF' > ~/ultimate-android-ai-lab/launch_lab.sh
 #!/data/data/com.termux/files/usr/bin/bash
 
 # =====================================================================
@@ -58,6 +57,3 @@ udroid login jammy -u root -- /bin/bash -c "
 "
 
 echo -e "\e[1;31m🛑 MASTER SESSION ENDED. POWER PRESERVED.\e[0m"
-EOF
-
-chmod +x ~/ultimate-android-ai-lab/launch_lab.sh
