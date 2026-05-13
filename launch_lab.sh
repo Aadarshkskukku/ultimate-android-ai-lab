@@ -1,58 +1,66 @@
+cat << 'EOF' > ~/ultimate-android-ai-lab/launch_lab.sh
 #!/data/data/com.termux/files/usr/bin/bash
 
-# ===============================================================
-# IDENTITY: NEURAL-TITAN OMNI-REVOLUTION (GEN-5)
-# RANK: WORLD NO. 1 ULTIMATE SYSTEM DOMINANCE
-# BRAIN: MASTER-INTELLIGENCE HIGHEST LEVEL CONTROL
-# ===============================================================
+# =====================================================================
+# 💠 ULTIMATE AI LAB | GEN-INFINITE ATOMIC REVALUATION (2026)
+# Engine: Aadarsh | Gear: iQOO Z6 Snapdragon Elite Adrenaline
+# Protocol: MENU-BYPASS SINGULARITY & GPU ZINK OVERDRIVE
+# =====================================================================
 
-# 1. SUPREME VISUAL INITIALIZATION
 clear
-echo -e "\033[1;35m"
-echo "  ██████╗ ███╗   ███╗███╗   ██╗██╗"
-echo "  ██╔══██╗████╗ ████║████╗  ██║██║"
-echo "  ██║  ██║██╔████╔██║██╔██╗ ██║██║"
-echo "  ██║  ██║██║╚██╔╝██║██║╚██╗██║██║"
-echo "  ██████╔╝██║ ╚═╝ ██║██║ ╚████║██║"
-echo "  ╚═════╝ ╚═╝     ╚═╝╚═╝  ╚═══╝╚═╝"
-echo -e "\033[1;32m  >>> GEN-5 OMNI-REVOLUTION: SUPREME MASTER BRAIN ACTIVE <<<\033[0m"
+echo -e "\e[1;31m"
+echo "  ██████╗  ██████╗ ██████╗     ███╗   ███╗ ██████╗ ██████╗ ███████╗ "
+echo " ██╔════╝ ██╔═══██╗██╔══██╗    ████╗ ████║██╔═══██╗██╔══██╗██╔════╝ "
+echo " ██║  ███╗██║   ██║██║  ██║    ██╔████╔██║██║   ██║██║  ██║█████╗   "
+echo " ██║   ██║██║   ██║██║  ██║    ██║╚██╔╝██║██║   ██║██║  ██║██╔══╝   "
+echo " ╚██████╔╝╚██████╔╝██████╔╝    ██║ ╚═╝ ██║╚██████╔╝██████╔╝███████╗ "
+echo "  ╚═════╝  ╚═════╝ ╚═════╝     ╚═╝     ╚═╝ ╚═════╝ ╚═════╝ ╚══════╝ "
+echo -e "\e[0m"
 
-# 2. HYPER-INTELLIGENCE SYNC (World No. 1 Repository Control)
-echo -e "\n\033[1;34m[🌐 HYPER-SYNC]\033[0m Pulling Next-Gen Intelligence from Global Grid..."
-cd ~/ultimate-android-ai-lab
-git checkout main --quiet
-git fetch --all --quiet
-git reset --hard origin/main --quiet
+echo -e "\e[1;36m🌀 ATOMIC IGNITION: BYPASSING INTERACTIVE MENUS...\e[0m"
 
-# 3. TITAN-MEMORY PURGE (Extreme Optimization)
-echo -e "\033[1;31m[🧹 TITAN PURGE]\033[0m Eradicating ghost threads & maximizing RAM..."
+# 1. THE SUPREME TITAN PURGE
+# Clears all ghost sockets that cause "Connection Refused" or Black Screens
+echo -e "\e[1;31m⚡ TITAN PURGE: Vaporizing ghost sessions & X11 locks...\e[0m"
 termux-wake-lock
-pkill -9 -f termux-x11; pkill -9 -f xfce4; pkill -9 -f dbus; pkill -9 -f udroid; pkill -9 -f pulseaudio; pkill -9 -f virgl
-rm -rf $TMPDIR/.X11-unix/X*
-sync && echo 3 > /proc/sys/vm/drop_caches 2>/dev/null
+pkill -9 -f termux-x11; pkill -9 -f xfce4; pkill -9 -f dbus; pkill -9 -f pulseaudio; pkill -9 -f node; pkill -9 -f udroid
+rm -rf $TMPDIR/.X11-unix/X* $TMPDIR/dbus-* $TMPDIR/pulse-* ~/.config/chromium/SingletonLock
+sleep 1
 
-# 4. QUANTUM X11 ENGINE (Highest Level Graphics)
-echo -e "\033[1;36m[⚡ QUANTUM ENGINE]\033[0m Engaging X11 Turbo Hub at Maximum FPS..."
-export DISPLAY=:1
-export PULSE_SERVER=127.0.0.1
-termux-x11 :1 -listen tcp -ac > /dev/null 2>&1 &
-sleep 2
+# 2. X11 ENGINE: QUANTUM OVERCLOCK
+# Specifically using TCP listen for the most stable Android-to-Linux bridge
+echo -e "\e[1;34m🖥️ X11 TURBO: Starting Visual Hub (TCP-Listen)...\e[0m"
+termux-x11 :1 -listen tcp -ac -extension MIT-SHM > /dev/null 2>&1 & 
+sleep 3
 
-# Force Launch Android Host
+# 3. FORCE-LAUNCH INTERFACE
 am start --user 0 -n com.termux.x11/com.termux.x11.MainActivity > /dev/null 2>&1
 sleep 1
 
-# 5. OMNI-DESKTOP INVERSION (The Final Evolution)
-echo -e "\033[1;33m[🚀 OMNI-INVERSION]\033[0m Launching World No.1 AI Laboratory Core..."
-udroid login jammy -- bash -l -c "
+# 4. GITHUB CLOUD SYNC
+echo -e "\e[1;32m🌐 CLOUD SYNC: Finalizing latest Global Intelligence...\e[0m"
+cd ~/ultimate-android-ai-lab && git pull origin main --quiet
+
+# 5. THE ATOMIC BYPASS (SINGULARITY PROTOCOL)
+# This forces udroid to enter 'jammy' and run startxfce4 without asking for a menu selection
+echo -e "\e[1;32m🧠 SYNC COMPLETE: FORCING DIRECT DESKTOP ENTRY...\e[0m"
+udroid login jammy -u root -- /bin/bash -c "
     export DISPLAY=:1
     export PULSE_SERVER=127.0.0.1
-    export GALLIUM_DRIVER=virpipe
-    export MESA_GL_VERSION_OVERRIDE=4.0
-    echo 'Neural-Titan Gen-5 Core Online.'
+    export XDG_RUNTIME_DIR=/tmp
+    export MESA_LOADER_DRIVER_OVERRIDE=zink
+    export GALLIUM_DRIVER=zink
+    
+    # Auto-Cleaning Chromium/Code locks to prevent startup failure
+    rm -rf ~/.config/chromium/SingletonLock ~/.config/Code/SingletonLock
+    
+    echo -e '\e[1;36m🔥 LAUNCHING CINEMATIC DESKTOP (BYPASS ENABLED)...\e[0m'
     dbus-launch --exit-with-session startxfce4
 "
 
-# 6. FAIL-SAFE RECOVERY
+# 6. POST-SESSION PRESERVATION
 termux-wake-unlock
-echo -e "\033[1;32m[✔️ MISSION ACCOMPLISHED]\033[0m System Evolution Stable. Lab is LIVE."
+echo -e "\e[1;31m🛑 MASTER SESSION ENDED. ALL POWER SECURED.\e[0m"
+EOF
+
+chmod +x ~/ultimate-android-ai-lab/launch_lab.sh
